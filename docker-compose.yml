@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  user-profile-api:
+    build: .
+    container_name: user-profile-api
+    ports:
+      - "8000:8000"
+    environment:
+      DB_SERVER: dist-6-505.uopnet.plymouth.ac.uk
+      DB_NAME: COMP2001_OAlbas
+      DB_USER: OAlbas
+      DB_PASSWORD: DtlJ855
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000
