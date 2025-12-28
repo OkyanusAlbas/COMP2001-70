@@ -4,3 +4,6 @@ pyodbc
 pydantic[email]
 email-validator
 pytest
+python-dotenv
+requests
+
