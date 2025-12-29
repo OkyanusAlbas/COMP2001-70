@@ -30,6 +30,12 @@ class UserUpdate(BaseModel):
     about_me: Optional[str] = None
 
 
+# Root endpoint
+
+@app.get("/")
+def root():
+    return {"status": "User Profile API is running"}
+
 # Health / DB test
 
 @app.get("/test-db")
